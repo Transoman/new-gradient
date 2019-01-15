@@ -8,6 +8,10 @@ let gp = require('gulp-load-plugins')(),
     };
 
 module.exports = function () {
+    $.gulp.task('img:clear', () => {
+        gp.cache.clearAll();
+    });
+
     $.gulp.task('img:dev', () => {
         return $.gulp.src(imgPATH.input)
             .pipe($.gulp.dest(imgPATH.ouput));
@@ -15,7 +19,7 @@ module.exports = function () {
 
     $.gulp.task('img:build', () => {
         return $.gulp.src(imgPATH.input)
-            .pipe(gp.cache(imagemin([
+            .pipe(gp.cache(gp.imagemin([
                 gp.imagemin.gifsicle({interlaced: true}),
                 gp.imagemin.jpegtran({progressive: true}),
                 imageminJpegRecompress({
@@ -26,7 +30,7 @@ module.exports = function () {
                 }),
                 gp.imagemin.svgo(),
                 gp.imagemin.optipng({optimizationLevel: 3}),
-                pngquant({quality: '65-70', speed: 5})
+                // pngquant({quality: '65-70', speed: 5})
             ], {
                 verbose: true
             })))
