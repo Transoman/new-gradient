@@ -1,5 +1,15 @@
 jQuery(document).ready(function($) {
 
+  // Fixed header
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 150) {
+      $('.header').addClass('fixed');
+    }
+    else {
+      $('.header').removeClass('fixed');
+    }
+  });
+
   // Toggle nav menu
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();

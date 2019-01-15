@@ -5,10 +5,29 @@
   right: 0
   padding: 50px 0
   z-index: 10
+  +transition
   +r(767)
     padding: 30px 0
   +r(480)
     padding: 15px 0
+  &.fixed
+    background-color: #fff
+    color: $cod-gray
+    .header
+      &__nav
+        .nav-list
+          a
+            color: inherit
+      &__logo
+        .logo__img
+          display: none
+          &-fixed
+            display: block
+    .nav-toggle
+      &__line
+        background-color: $cod-gray
+        &::before, &::after
+          background-color: $cod-gray
   .container
     display: flex
     align-items: center
