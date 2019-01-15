@@ -1,40 +1,63 @@
-.nav-toggle
-  display: none
-  position: absolute
-  right: 0
-  top: 17px
-  width: 28px
-  height: 15px
-  padding: 0
+.nav-list
   margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  +r(992)
+    display: none
+  & > *:not(:last-child)
+    margin-right: 60px
+    +r(1200)
+      margin-right: 30px
+  li
+    &:hover, &:focus
+      a
+        color: $moon-glow
+        text-decoration: underline
+  a
+    font-size: 24px
+    font-weight: 600
+    color: #fff
+
+.nav-toggle
+  flex-shrink: 0
+  width: 30px
+  height: 20px
+  padding: 0
+  margin: 0 30px 0 auto
   outline: none
   border: none
   background: none
   z-index: 101
   cursor: pointer
   +transition
+  +r(1200)
+    margin-right: 0
   &:focus
     outline: none
   &__line
     position: relative
     display: block
-    height: 2px
+    height: 3px
     width: 100%
-    background: $accent
+    background: #fff
+    border-radius: 1.5px
     +transition
     &::after, &::before
       content: ''
       position: absolute
       left: 0
       display: block
-      height: 2px
+      height: 3px
       width: 100%
-      background: $accent
+      background: #fff
+      border-radius: 1.5px
       +transition
     &::before
-      top: -6px
+      top: -8px
     &::after
-      top: 6px
+      top: 8px
   &.active
     .nav-toggle__line
       background: transparent

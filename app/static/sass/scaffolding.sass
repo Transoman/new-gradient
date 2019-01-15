@@ -27,10 +27,18 @@ body
   font-size: 20px
   line-height: 1.5
   color: $main-color
+  background-color: #ccc
 
 img
   max-width: 100%
   height: auto
+
+a
+  text-decoration: none
+  +transition
+  &:hover, &:focus
+    outline: none
+    text-decoration: none
 
 /* Hidden element */
 .visually-hidden
@@ -72,5 +80,5 @@ img
     color: #fff
 
 .container
-  +rmin(1200)
+  +rmin(1440)
     max-width: 1440px
