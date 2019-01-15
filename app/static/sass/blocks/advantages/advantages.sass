@@ -1,0 +1,55 @@
+.advantages
+  .section-desc
+    max-width: 930px
+    margin: 0 auto 140px
+    & > *:not(:last-child)
+      margin-bottom: 40px
+    a
+      color: $vivid-violet-2
+    .btn
+      padding-top: 18px
+      padding-bottom: 18px
+      font-size: 30px
+  &__list
+    padding-left: 120px
+    +r(1200)
+      padding-left: 0
+    & > *:not(:last-child)
+      margin-bottom: 115px
+      +r(1200)
+        margin-bottom: 85px
+      +r(576)
+        margin-bottom: 50px
+    &-item
+      display: flex
+      align-items: center
+      max-width: 930px
+      +r(767)
+        flex-direction: column
+        text-align: center
+      &:nth-child(2)
+        margin-left: 330px
+        +r(1440)
+          margin-left: 190px
+        +r(1200)
+          margin-left: 0
+      &:nth-child(3)
+        margin-left: 90px
+        +r(1200)
+          margin-left: 0
+    &-icon
+      flex-shrink: 0
+      margin-right: 150px
+      +r(1200)
+        width: 275px
+        margin-right: 100px
+        text-align: center
+      +r(992)
+        width: 155px
+        margin-right: 60px
+      +r(767)
+        margin-right: 0
+        margin-bottom: 30px
+    &-content
+      & > *:not(:last-child)
+        margin-bottom: 15px
