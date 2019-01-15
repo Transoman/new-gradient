@@ -27,7 +27,6 @@ body
   font-size: 20px
   line-height: 1.5
   color: $main-color
-  background-color: #ccc
 
 img
   max-width: 100%
@@ -52,32 +51,81 @@ a
   overflow: hidden
 
 /* Buttons */
+$border: 3px
 .btn
-  display: inline-block
-  vertical-align: middle
-  padding: 10px 15px
+  position: relative
+  // display: inline-block
+  // vertical-align: middle
+  padding: 15px 60px
   font-family: $main-font
-  font-size: 16px
-  font-weight: 700
-  color: #fff
+  font-size: 24px
+  font-weight: 800
+  color: $cod-gray
   text-align: center
-  background-color: $accent
-  border: 0
+  background-color: #fff
+  background-clip: padding-box
+  border: $border solid transparent
+  border-radius: 30px
   outline: none
   text-decoration: none
   cursor: pointer
   user-select: none
   transition: all .25s ease
-  text-transform: uppercase
+  box-shadow: 0 20px 60px rgba($medium-purple, 0.5)
+  z-index: 1
+  +r(992)
+    font-size: 16px
+  +r(576)
+    font-size: 14px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    margin: -$border
+    border-radius: inherit
+    background-image: linear-gradient($vivid-violet, $purple-heart)
+    z-index: -1
   &:hover
-    background-color: lighten($accent, 5%)
+    background-image: linear-gradient($vivid-violet, $purple-heart)
+    color: #fff
+    background-clip: content-box
   &:active
-    background-color: darken($accent, 5%)
-    color: rgba(255,255,255,.3)
+    background-image: linear-gradient($vivid-violet, $purple-heart)
+    color: #fff
+    background-clip: content-box
   &[disabled]
     background-color: #e5e5e5
     cursor: not-allowed
     color: #fff
+
+  &--purple
+    display: inline-block
+    vertical-align: middle
+    padding: 27px 55px
+    background-image: linear-gradient($vivid-violet, $purple-heart)
+    border: 0
+    color: #fff
+    text-transform: uppercase
+    letter-spacing: 0.1px
+    border-radius: 36px
+    +r(992)
+      padding: 15px 30px
+    &::before
+      margin: 0
+      background-image: linear-gradient(lighten($vivid-violet, 8%), $purple-heart)
+      opacity: 0
+      +transition
+    &:hover
+      background-clip: padding-box
+      &::before
+        opacity: 1
+    &:focus
+      &::before
+        background-image: linear-gradient($purple-heart, $purple-heart)
+        opacity: 1
 
 .container
   +rmin(1440)

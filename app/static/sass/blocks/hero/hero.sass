@@ -1,0 +1,31 @@
+.hero
+  padding: 300px 0 310px
+  background:
+    repeat: no-repeat
+    position: center top
+    size: cover
+  +r(1200)
+    padding: 180px 0
+  +r(576)
+    padding: 140px 0
+  &__content
+    +r(576)
+      text-align: center
+    h1
+      margin-bottom: 60px
+      font-size: 72px
+      font-weight: 400
+      color: $oyster-bay
+      text-shadow: 15px 0 25px rgba($keppel, 0.2)
+      +r(992)
+        margin-bottom: 40px
+        font-size: 42px
+      strong
+        font-size: 164px
+        text-transform: uppercase
+        color: #fff
+        line-height: 0.78
+        +r(992)
+          font-size: 94px
+        +r(576)
+          font-size: 70px
