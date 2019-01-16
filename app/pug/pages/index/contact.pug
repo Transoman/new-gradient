@@ -1,0 +1,37 @@
+section.contact
+  .container
+    .row
+      .col-xl-6.col-lg-5
+        .contact__content
+          ul.social
+            li
+              a(href="#")
+                +icon('fb', 'social__icon')
+            li
+              a(href="#")
+                +icon('inst', 'social__icon')
+          a(href="mailto:support@newgradient.us").contact__email support@newgradient.us
+          p Los Angeles, California
+
+          ul.contact__nav
+            li
+              a(href="#") Terms and Conditions
+            li
+              a(href="#") Privacy Policy
+
+      .col-xl-6.col-lg-7
+        .contact__form-wrap
+          .contact__form-text
+            h3 Get 20% off cart value
+            p enter your email to get the discount code
+
+          form.form
+            .form-group
+              input(type="email", name="email", placeholder="Email address", required).form__field
+            .form-group.form-group--btn
+              button(type="submit").btn.btn--white.form__btn Join
+
+    .contact__bottom
+      p.copyright Copyright ©2018
+
+// /.contact

@@ -1,0 +1,21 @@
+.social
+  margin: 0
+  margin-bottom: 90px
+  padding: 0
+  list-style: none
+  display: flex
+  +r(767)
+    justify-content: center
+    margin-bottom: 50px
+  & > *:not(:last-child)
+    margin-right: 20px
+  li
+    &:hover
+      .social__icon
+        fill: $purple-heart
+  &__icon
+    +size(62px)
+    fill: #fff
+    +transition
+    +r(767)
+      +size(42px)
