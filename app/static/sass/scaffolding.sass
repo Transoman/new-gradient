@@ -93,8 +93,8 @@ section
 $border: 3px
 .btn
   position: relative
-  // display: inline-block
-  // vertical-align: middle
+  display: inline-block
+  vertical-align: middle
   padding: 15px 60px
   font-family: $main-font
   font-size: 24px
@@ -102,8 +102,6 @@ $border: 3px
   color: $cod-gray
   text-align: center
   background-color: #fff
-  background-clip: padding-box
-  border: $border solid transparent
   border-radius: 30px
   outline: none
   text-decoration: none
@@ -126,28 +124,37 @@ $border: 3px
     margin: -$border
     border-radius: inherit
     background-image: linear-gradient($vivid-violet, $purple-heart)
+    z-index: -2
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border-radius: 27px
+    background-color: #fff
     z-index: -1
+    +transition
   &:hover
-    background-image: linear-gradient($vivid-violet, $purple-heart)
     color: #fff
-    background-clip: content-box
+    &::after
+      opacity: 0
   &:active
-    background-image: linear-gradient($vivid-violet, $purple-heart)
     color: #fff
-    background-clip: content-box
+  &:focus
+    color: #fff
+    &::after
+      opacity: 0
   &[disabled]
     background-color: #e5e5e5
     cursor: not-allowed
     color: #fff
   &--purple
-    display: inline-block
-    vertical-align: middle
     padding: 27px 55px
     background-image: linear-gradient($vivid-violet, $purple-heart)
-    border: 0
     color: #fff
     text-transform: uppercase
-    letter-spacing: 0.1px
     border-radius: 36px
     +r(992)
       padding: 15px 30px
@@ -156,8 +163,10 @@ $border: 3px
       background-image: linear-gradient(lighten($vivid-violet, 8%), $purple-heart)
       opacity: 0
       +transition
+    &::after
+      background-image: linear-gradient($vivid-violet, $purple-heart)
+      border-radius: inherit
     &:hover
-      background-clip: padding-box
       &::before
         opacity: 1
     &:focus
@@ -165,12 +174,12 @@ $border: 3px
         background-image: linear-gradient($purple-heart, $purple-heart)
         opacity: 1
   &--white
-    display: inline-block
-    vertical-align: middle
     background: $oyster-bay
-    border-color: #fff
+    border: 3px solid #fff
     box-shadow: 0 20px 60px rgba($fountain-blue, 0.8)
     &::before
+      display: none
+    &::after
       display: none
     &:hover
       background-image: linear-gradient($vivid-violet, $purple-heart)
@@ -179,7 +188,6 @@ $border: 3px
       border-color: transparent
       color: #fff
       &::before
-        margin: 0
         background-image: linear-gradient(lighten($vivid-violet, 8%), $purple-heart)
         +transition
     &:focus
