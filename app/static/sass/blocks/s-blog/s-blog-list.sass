@@ -1,0 +1,19 @@
+.s-blog-list
+  +r(992)
+    margin-bottom: 50px
+  & > *:not(:last-child)
+    margin-bottom: 70px
+    +r(767)
+      margin-bottom: 40px
+  &__time
+    font-size: 14px
+    color: $rock-blue
+  &__title
+    a
+      color: inherit
+      text-decoration: none
+      &:hover
+        color: $purple-heart
+  &__link
+    font-size: 18px
+    font-weight: 500

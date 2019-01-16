@@ -1,0 +1,33 @@
+@import 's-blog-list'
+
+.s-blog
+  padding-top: 225px
+  padding-bottom: 260px
+  +r(1200)
+    padding: 160px 0
+  +r(767)
+    padding: 50px 0
+  .section-title
+    margin-bottom: 20px
+    text-align: left
+    +r(992)
+      text-align: center
+  .section-desc
+    margin-bottom: 100px
+    font-size: 36px
+    text-align: left
+    +r(992)
+      text-align: center
+      font-size: 30px
+    +r(767)
+      margin-bottom: 50px
+      font-size: 24px
+  &__img-wrap
+    text-align: right
+    +r(992)
+      max-width: 340px
+      margin: 0 auto
+    img
+      transform: translateX(65px)
+      +r(992)
+        transform: none
