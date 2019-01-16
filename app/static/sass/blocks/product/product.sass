@@ -25,7 +25,7 @@
       text-align: center
     &:nth-child(1)
       .product-list__img-wrap
-        &::after
+        &::before
           content: ''
           position: absolute
           bottom: -100px
@@ -34,6 +34,7 @@
           width: 585px
           height: 545px
           background: url('../images/general/shape-yellow.svg') no-repeat center / contain
+          z-index: -1
           +r(1200)
             width: 400px
             height: 370px
@@ -48,7 +49,7 @@
             bottom: -30px
     &:nth-child(2)
       .product-list__img-wrap
-        &::after
+        &::before
           content: ''
           position: absolute
           bottom: -70px
@@ -57,6 +58,7 @@
           width: 585px
           height: 545px
           background: url('../images/general/shape-mint.svg') no-repeat center / contain
+          z-index: -1
           +r(1200)
             width: 400px
             height: 370px
@@ -70,7 +72,7 @@
             bottom: -30px
     &:nth-child(3)
       .product-list__img-wrap
-        &::after
+        &::before
           content: ''
           position: absolute
           bottom: -70px
@@ -79,6 +81,7 @@
           width: 585px
           height: 545px
           background: url('../images/general/shape-green.svg') no-repeat center / contain
+          z-index: -1
           +r(1200)
             width: 400px
             height: 370px
@@ -95,9 +98,8 @@
       flex-direction: row-reverse
   &__img-wrap
     position: relative
-    // flex: 0 0 48.93%
-    // width: 48.93%
     text-align: center
+    z-index: 1
     +r(767)
       margin-bottom: 50px
     img

@@ -1,1 +1,30 @@
-// Form
+.form
+  &-group
+    position: relative
+    margin-bottom: 50px
+    +r(576)
+      margin-bottom: 30px
+    &:last-child
+      margin-bottom: 0
+  &__field
+    width: 100%
+    padding: 25px 15px
+    background-color: transparent
+    background-image: linear-gradient(to right rgba(#fff, 0.15), rgba(#000, 0.15))
+    border: 3px solid $oyster-bay
+    border-radius: 36px
+    font-size: 30px
+    font-weight: 600
+    color: inherit
+    text-align: center
+    +r(767)
+      padding: 15px
+    +r(576)
+      font-size: 22px
+    &::placeholder
+      color: inherit
+    &:focus
+      outline: none
+  &__btn
+    &:focus
+      outline: none

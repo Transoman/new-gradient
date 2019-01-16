@@ -2,7 +2,7 @@ jQuery(document).ready(function($) {
 
   // Fixed header
   $(window).scroll(function() {
-    if($(this).scrollTop() > 150) {
+    if($(this).scrollTop() > 10) {
       $('.header').addClass('fixed');
     }
     else {

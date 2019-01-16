@@ -139,7 +139,6 @@ $border: 3px
     background-color: #e5e5e5
     cursor: not-allowed
     color: #fff
-
   &--purple
     display: inline-block
     vertical-align: middle
@@ -165,6 +164,31 @@ $border: 3px
       &::before
         background-image: linear-gradient($purple-heart, $purple-heart)
         opacity: 1
+  &--white
+    display: inline-block
+    vertical-align: middle
+    background: $oyster-bay
+    border-color: #fff
+    box-shadow: 0 20px 60px rgba($fountain-blue, 0.8)
+    &::before
+      display: none
+    &:hover
+      background-image: linear-gradient($vivid-violet, $purple-heart)
+      color: #fff
+      background-clip: padding-box
+      border-color: transparent
+      color: #fff
+      &::before
+        margin: 0
+        background-image: linear-gradient(lighten($vivid-violet, 8%), $purple-heart)
+        +transition
+    &:focus
+      background-image: linear-gradient($purple-heart, $purple-heart)
+      background-clip: padding-box
+      border-color: transparent
+      color: #fff
+      &::before
+        background-image: linear-gradient($purple-heart, $purple-heart)
 
 .container
   +rmin(1440)
