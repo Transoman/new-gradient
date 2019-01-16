@@ -45,3 +45,21 @@
       max-width: 250px
   &__nav
     margin-right: 20px
+  &--inner
+    color: $cod-gray
+    background-color: #fff
+    .header
+      &__nav
+        .nav-list
+          a
+            color: inherit
+      &__logo
+        .logo__img
+          display: none
+        .logo__img-fixed
+          display: inline
+    .nav-toggle
+      &__line
+        background-color: $cod-gray
+        &::before, &::after
+          background-color: $cod-gray

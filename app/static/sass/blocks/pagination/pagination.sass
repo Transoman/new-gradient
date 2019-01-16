@@ -1,0 +1,28 @@
+.pagination
+  +r(767)
+    display: flex
+    justify-content: space-around
+    text-align: center
+  &__link
+    display: inline-block
+    vertical-align: middle
+    margin-right: 35px
+    font-size: 18px
+    font-weight: 500
+    color: $cod-gray
+    text-decoration: none
+    +r(767)
+      margin: 0
+    &:last-child
+      margin-right: 0
+    &--current
+      color: $vivid-violet-2
+      text-decoration: underline
+    &--prev
+      margin-right: 100px
+      +r(767)
+        margin: 0
+    &--next
+      margin-left: 65px
+      +r(767)
+        margin: 0
