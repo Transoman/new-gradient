@@ -1,0 +1,28 @@
+.about
+  padding: 260px 0 240px
+  +r(1200)
+    padding: 160px 0
+  +r(767)
+    padding: 50px 0
+    text-align: center
+  .row
+    +r(1200)
+      align-items: center
+  &__img-wrap
+    +r(992)
+      max-width: 340px
+      margin: 0 auto 50px
+    img
+      transform: translateX(-30px)
+      +r(992)
+        transform: none
+  .section-title
+    text-align: left
+    +r(992)
+      text-align: center
+    +r(767)
+      margin-bottom: 30px
+  &__content
+    & > *:not(:last-child)
+      margin-bottom: 25px
+    margin-bottom: 40px
