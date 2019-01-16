@@ -1,0 +1,24 @@
+.mobile-menu
+  position: fixed
+  top: 0
+  right: 0
+  width: 320px
+  height: 100%
+  padding: 80px 15px 50px
+  overflow-y: auto
+  background-color: #fff
+  box-shadow: 0 0 10px rgba($cod-gray, 0.1)
+  +transition(0.5s)
+  transform: translateX(100%)
+  &.open
+    transform: translateX(0)
+  &__nav
+    margin: 0
+    padding: 0
+    list-style: none
+    a
+      color: $cod-gray
+      text-decoration: none
+      &:hover
+        color: $purple-heart
+        text-decoration: underline

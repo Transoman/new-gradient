@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();
     $(this).toggleClass('active');
-    $('.header__nav').toggleClass('open');
+    $('.mobile-menu').toggleClass('open');
   });
 
   // Modal
@@ -27,5 +27,34 @@ jQuery(document).ready(function($) {
 
   // SVG
   svg4everybody({});
+
+  // Scroll smooth
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+
+        $headerHeight = $('.header').outerHeight();
+
+        $('html, body').animate({
+          scrollTop: target.offset().top - $headerHeight
+        }, 1000);
+      }
+    }
+  });
 
 });

@@ -60,11 +60,21 @@
     &::after
       top: 8px
   &.active
+    position: fixed
+    right: 15px
+    top: 25px
+    margin-right: 0
+    +r(767)
+      position: static
+      top: auto
+      right: auto
     .nav-toggle__line
       background: transparent
       &::after
         top: 0
         transform: rotate(45deg)
+        background: $cod-gray
       &::before
         top: 0
         transform: rotate(-45deg)
+        background: $cod-gray
