@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
 
+  AOS.init({
+    duration: 1000
+  });
+
   // Fixed header
   $(window).scroll(function() {
     if($(this).scrollTop() > 10) {
