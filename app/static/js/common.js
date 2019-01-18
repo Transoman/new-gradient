@@ -53,6 +53,8 @@ jQuery(document).ready(function($) {
         event.preventDefault();
 
         $headerHeight = $('.header').outerHeight();
+        $('.nav-toggle').toggleClass('active');
+        $('.mobile-menu').toggleClass('open');
 
         $('html, body').animate({
           scrollTop: target.offset().top - $headerHeight

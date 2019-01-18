@@ -3,8 +3,10 @@
     margin-bottom: 10px
   .section-desc
     margin-bottom: 170px
-    +r(992)
-      margin-bottom: 130px
+    +r(1439)
+      margin-bottom: 100px
+    +r(767)
+      margin-bottom: 60px
   &__img-wrap
     position: relative
     margin-bottom: 10px
@@ -12,24 +14,23 @@
     z-index: 1
     +r(992)
       margin-bottom: 50px
-    &::before
-      content: ''
+    img
       position: absolute
-      bottom: 30px
+      bottom: 0
       left: 50%
       transform: translateX(-50%)
-      width: 480px
-      height: 465px
-      opacity: 0.2
-      background: url('../images/general/shape-blue.svg') no-repeat center / contain
-      z-index: -1
-      +r(992)
-        +size(360px)
-        bottom: 10px
-      +r(767)
-        +size(280px)
+      z-index: 1
+      +r(576)
         bottom: 50%
         transform: translate(-50%, 50%)
+    canvas
+      max-width: 480px
+      width: 100%
+      opacity: 0.2
+      +r(992)
+        max-width: 350px
+      +r(767)
+          max-width: 270px
   &__steps
     position: relative
     display: flex
