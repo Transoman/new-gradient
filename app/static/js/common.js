@@ -1,7 +1,8 @@
 jQuery(document).ready(function($) {
 
   AOS.init({
-    duration: 1000
+    duration: 1000,
+    once: true
   });
 
   // Fixed header
