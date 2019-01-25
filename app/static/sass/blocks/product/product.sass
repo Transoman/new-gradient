@@ -1,13 +1,19 @@
 .product
   padding-top: 300px
   padding-bottom: 440px
-  background: url('../images/general/product-bg.jpg') no-repeat center top / cover
+  background: url('../images/general/product-bg.jpg') no-repeat center top / 100% 100%
+  +r(1599)
+    padding-top: 200px
+    padding-bottom: 170px
   +r(1200)
     padding: 160px 0
+    background-size: cover
   +r(767)
     padding: 100px 0
   .section-title
     margin-bottom: 170px
+    +r(1599)
+      margin-bottom: 120px
     +r(1200)
       margin-bottom: 100px
     +r(992)
@@ -35,7 +41,7 @@
           height: 545px
           background: url('../images/general/shape-yellow.svg') no-repeat center / contain
           z-index: -1
-          +r(1200)
+          +r(1599)
             width: 400px
             height: 370px
             bottom: -60px
@@ -59,9 +65,10 @@
           height: 545px
           background: url('../images/general/shape-mint.svg') no-repeat center / contain
           z-index: -1
-          +r(1200)
+          +r(1599)
             width: 400px
             height: 370px
+            bottom: -10px
           +r(992)
             width: 300px
             height: 280px
@@ -82,10 +89,10 @@
           height: 545px
           background: url('../images/general/shape-green.svg') no-repeat center / contain
           z-index: -1
-          +r(1200)
+          +r(1599)
             width: 400px
             height: 370px
-            bottom: -60px
+            bottom: 35px
           +r(992)
             width: 300px
             height: 280px
@@ -103,7 +110,7 @@
     +r(767)
       margin-bottom: 50px
     img
-      +r(1200)
+      +r(1599)
         width: 200px
       +r(767)
         width: 130px
@@ -118,6 +125,8 @@
   &__title
     margin: 0 30px 0 0
     font-size: 60px
+    +r(1599)
+      font-size: 40px
     +r(992)
       font-size: 40px
     +r(576)
@@ -128,11 +137,15 @@
     font-size: 18px
     font-weight: 600
     color: $cod-gray
+    +r(1599)
+      font-size: 14px
     &-second
       margin-top: 10px
     &-divider
       margin-top: 5px
   &__content
+    +r(1599)
+      font-size: 14px
     +r(992)
       font-size: 16px
     p

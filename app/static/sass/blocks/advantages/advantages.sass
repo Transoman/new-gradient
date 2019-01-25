@@ -1,23 +1,29 @@
 .advantages
+  +r(1599)
+    padding-bottom: 80px
   .section-desc
     max-width: 930px
     margin: 0 auto 140px
+    +r(1599)
+      max-width: 600px
+      margin-bottom: 110px
     & > *:not(:last-child)
       margin-bottom: 40px
+      +r(1599)
+        margin-bottom: 30px
     a
       color: $vivid-violet-2
-    .btn
-      padding-top: 18px
-      padding-bottom: 18px
-      font-size: 30px
-      &:hover, &:focus
-        color: #fff
   &__list
     padding-left: 120px
+    margin-bottom: 90px
+    +r(1599)
+      padding-left: 85px
     +r(1200)
       padding-left: 0
     & > *:not(:last-child)
       margin-bottom: 115px
+      +r(1599)
+        margin-bottom: 95px
       +r(1200)
         margin-bottom: 85px
       +r(576)
@@ -31,27 +37,54 @@
         text-align: center
       &:nth-child(2)
         margin-left: 330px
-        +r(1440)
-          margin-left: 190px
+        +r(1599)
+          margin-left: 220px
+          .advantages__list-icon
+            width: 170px
         +r(1200)
           margin-left: 0
       &:nth-child(3)
         margin-left: 90px
+        +r(1599)
+          margin-left: 60px
+          .advantages__list-icon
+            width: 170px
         +r(1200)
           margin-left: 0
     &-icon
       flex-shrink: 0
       margin-right: 150px
-      +r(1200)
-        width: 275px
+      +r(1599)
+        width: 170px
         margin-right: 100px
+      +r(1200)
         text-align: center
       +r(992)
-        width: 155px
         margin-right: 60px
       +r(767)
+        width: 140px
         margin-right: 0
         margin-bottom: 30px
     &-content
+      +r(1599)
+        max-width: 400px
+        font-size: 14px
       & > *:not(:last-child)
         margin-bottom: 15px
+      h3
+        +r(1599)
+          font-size: 20px
+  &__bottom
+    text-align: center
+    .btn
+      padding-top: 18px
+      padding-bottom: 18px
+      font-size: 30px
+      +r(1599)
+        font-size: 20px
+        padding: 10px 30px
+        border-radius: 20px
+        &::after
+          border-radius: 17px
+      &:hover, &:focus
+        color: #fff

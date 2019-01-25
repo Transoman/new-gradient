@@ -4,7 +4,7 @@
   right: 0
   width: 320px
   height: 100%
-  padding: 80px 15px 50px
+  padding: 60px 15px 50px
   overflow-y: auto
   background-color: #fff
   box-shadow: 0 0 10px rgba($cod-gray, 0.1)
@@ -12,6 +12,26 @@
   transform: translateX(100%)
   &.open
     transform: translateX(0)
+  img
+    display: block
+    width: 180px
+    margin: 0 auto 40px
+  .nav-list
+    flex-direction: column
+    align-items: stretch
+    +r(992)
+      display: flex
+    li
+      margin-right: 0
+    a
+      font-size: 20px
+      font-weight: 400
+      color: $cod-gray
+      +r(1599)
+        font-size: 14px
+      &:hover, &:focus
+        color: $purple-heart
+        text-decoration: underline
   &__nav
     margin: 0
     padding: 0
@@ -19,6 +39,6 @@
     a
       color: $cod-gray
       text-decoration: none
-      &:hover
+      &:hover, &:focus
         color: $purple-heart
         text-decoration: underline

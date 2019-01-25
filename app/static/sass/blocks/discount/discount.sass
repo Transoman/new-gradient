@@ -1,10 +1,14 @@
 .discount
   padding-top: 260px
-  background: url('../images/general/discount-bg.png') no-repeat center top / cover
+  background: url('../images/general/discount-bg.png') no-repeat center top / 100% 100%
   color: $oyster-bay
   text-align: center
+  +r(1599)
+    padding-top: 180px
+    padding-bottom: 95px
   +r(1200)
     padding-top: 160px
+    background-size: cover
   +r(767)
     padding-top: 100px
   a
@@ -16,14 +20,15 @@
     color: #fff
   .section-desc
     margin-bottom: 115px
-    +r(1200)
-      margin-bottom: 75px
+    +r(1599)
+      margin-bottom: 70px
     +r(576)
       margin-bottom: 45px
   .form
     max-width: 720px
     margin: 0 auto 110px
-    +r(767)
+    +r(1599)
+      max-width: 470px
       margin-bottom: 75px
     +r(576)
       margin-bottom: 45px

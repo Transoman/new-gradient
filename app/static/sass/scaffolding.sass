@@ -31,8 +31,8 @@ body
   line-height: 1.5
   color: $main-color
   overflow-x: hidden
-  +r(576)
-    font-size: 16px
+  +r(1599)
+    font-size: 14px
 
 img
   max-width: 100%
@@ -54,8 +54,8 @@ h1, h2, h3, h4, h5, h6
 h2
   font-size: 80px
   font-weight: 800
-  +r(992)
-    font-size: 60px
+  +r(1599)
+    font-size: 50px
   +r(767)
     font-size: 40px
   +r(576)
@@ -63,8 +63,8 @@ h2
 
 h3
   font-size: 30px
-  +r(576)
-    font-size: 24px
+  +r(1599)
+    font-size: 20px
 
 b, strong
   font-weight: 600
@@ -73,6 +73,8 @@ b, strong
 section
   position: relative
   padding: 160px 0
+  +r(1599)
+    padding: 110px 0
   +r(992)
     padding: 100px 0
   +r(767)
@@ -110,6 +112,10 @@ $border: 3px
   transition: all .25s ease
   box-shadow: 0 20px 60px rgba($medium-purple, 0.5)
   z-index: 1
+  +r(1599)
+    font-size: 18px
+    padding: 10px 40px
+    border-radius: 20px
   +r(992)
     font-size: 16px
   +r(576)
@@ -136,6 +142,8 @@ $border: 3px
     background-color: #fff
     z-index: -1
     +transition
+    +r(1599)
+      border-radius: 17px
   &:hover
     color: #fff
     &::after
@@ -156,8 +164,13 @@ $border: 3px
     color: #fff
     text-transform: uppercase
     border-radius: 36px
+    +r(1599)
+      padding: 17px 40px
+      font-size: 16px
     +r(992)
       padding: 15px 30px
+    +r(576)
+      font-size: 14px
     &::before
       margin: 0
       background-image: linear-gradient(lighten($vivid-violet, 8%), $purple-heart)
@@ -199,12 +212,16 @@ $border: 3px
         background-image: linear-gradient($purple-heart, $purple-heart)
 
 .container
-  +rmin(1440)
+  +rmin(1200)
+    max-width: 960px
+  +rmin(1600)
     max-width: 1440px
 
 .section-title
   margin-bottom: 50px
   text-align: center
+  +r(1599)
+    margin-bottom: 35px
   +r(576)
     margin-bottom: 30px
 
@@ -212,8 +229,8 @@ $border: 3px
   font-size: 30px
   font-weight: 300
   text-align: center
-  +r(992)
-    font-size: 24px
+  +r(1599)
+    font-size: 19px
   +r(576)
     font-size: 18px
 

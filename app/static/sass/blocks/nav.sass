@@ -8,6 +8,8 @@
     display: none
   & > *:not(:last-child)
     margin-right: 60px
+    +r(1599)
+      margin-right: 40px
     +r(1200)
       margin-right: 30px
   li
@@ -20,6 +22,8 @@
     font-weight: 600
     color: #fff
     text-decoration: none
+    +r(1599)
+      font-size: 16px
 
 .nav-toggle
   flex-shrink: 0
@@ -33,7 +37,8 @@
   z-index: 101
   cursor: pointer
   +transition
-  +r(1200)
+  +r(1599)
+    width: 20px
     margin-right: 0
   &:focus
     outline: none
@@ -45,6 +50,8 @@
     background: #fff
     border-radius: 1.5px
     +transition
+    +r(1599)
+      height: 2px
     &::after, &::before
       content: ''
       position: absolute
@@ -55,19 +62,25 @@
       background: #fff
       border-radius: 1.5px
       +transition
+      +r(1599)
+        height: 2px
     &::before
       top: -8px
+      +r(1599)
+        top: -5px
     &::after
       top: 8px
+      +r(1599)
+        top: 5px
   &.active
     position: fixed
     right: 15px
     top: 25px
     margin-right: 0
-    +r(767)
-      position: static
-      top: auto
-      right: auto
+    // +r(576)
+    //   position: static
+    //   top: auto
+    //   right: auto
     .nav-toggle__line
       background: transparent
       &::after

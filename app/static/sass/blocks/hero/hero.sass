@@ -2,12 +2,17 @@
   padding: 300px 0 310px
   background:
     repeat: no-repeat
-    position: center top
+    position: center bottom
     size: cover
+  +r(1599)
+    padding-top: 200px
+    padding-bottom: 210px
+    background-size: 100% 100%
   +r(1200)
     padding: 180px 0
   +r(576)
-    padding: 140px 0
+    padding: 100px 0
+    background-size: cover
   &__content
     +r(576)
       text-align: center
@@ -17,15 +22,20 @@
       font-weight: 400
       color: $oyster-bay
       text-shadow: 15px 0 25px rgba($keppel, 0.2)
+      +r(1599)
+        margin-bottom: 55px
+        font-size: 49px
       +r(992)
         margin-bottom: 40px
-        font-size: 42px
+        font-size: 39px
       strong
         font-size: 164px
         text-transform: uppercase
         color: #fff
         line-height: 0.78
+        +r(1599)
+          font-size: 110px
         +r(992)
           font-size: 94px
         +r(576)
-          font-size: 70px
+          font-size: 60px

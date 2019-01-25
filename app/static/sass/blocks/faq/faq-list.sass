@@ -1,8 +1,8 @@
 .faq-list
   &__item
     margin-bottom: 100px
-    +r(1200)
-      margin-bottom: 70px
+    +r(1599)
+      margin-bottom: 60px
     +r(992)
       &:last-child
         margin-bottom: 0
@@ -11,10 +11,12 @@
   &__inner
     position: relative
     padding: 0 30px 0 120px
+    +r(1599)
+      padding: 0 0 0 105px
     +r(1200)
       padding: 0 0 0 70px
     +r(576)
-      padding: 60px 0 0
+      padding: 40px 0 0
       text-align: center
     p
       &:last-child
@@ -23,6 +25,10 @@
     position: absolute
     top: -10px
     left: 40px
+    +r(1599)
+      top: 0
+      left: 50px
+      width: 32px
     +r(1200)
       left: 0
     +r(576)
@@ -31,5 +37,6 @@
       transform: translateX(-50%)
   &__title
     margin-bottom: 20px
-    +r(576)
-      font-size: 22px
+    +r(1599)
+      margin-bottom: 15px
+      font-size: 20px

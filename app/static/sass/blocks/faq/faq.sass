@@ -3,14 +3,18 @@
 .faq
   padding-top: 230px
   padding-bottom: 190px
-  background: url('../images/general/faq-bg.png') no-repeat center top / cover
+  background: url('../images/general/faq-bg.png') no-repeat center top / 100% 100%
+  +r(1599)
+    padding: 150px 0 130px
   +r(1200)
-    padding: 160px 0
+    background-size: cover
   +r(767)
     padding: 50px 0
   .section-title
     margin-bottom: 135px
     text-align: left
+    +r(1599)
+      margin-bottom: 100px
     +r(992)
       margin-bottom: 60px
       text-align: center

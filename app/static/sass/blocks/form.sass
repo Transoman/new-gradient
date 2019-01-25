@@ -2,6 +2,8 @@
   &-group
     position: relative
     margin-bottom: 50px
+    +r(1599)
+      margin-bottom: 40px
     +r(576)
       margin-bottom: 30px
     &:last-child
@@ -17,10 +19,11 @@
     font-weight: 600
     color: inherit
     text-align: center
-    +r(767)
+    +r(1599)
       padding: 15px
-    +r(576)
-      font-size: 22px
+      font-size: 20px
+      border-radius: 20px
+      border-width: 2px
     &::placeholder
       color: inherit
     &:focus
@@ -29,5 +32,7 @@
     text-transform: uppercase
     max-width: 240px
     width: 100%
+    +r(1599)
+      max-width: 160px
     &:focus
       outline: none
