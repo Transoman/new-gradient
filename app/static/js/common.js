@@ -27,8 +27,112 @@ jQuery(document).ready(function($) {
     transition: 'all 0.3s',
     onclose: function() {
       $(this).find('label.error').remove();
+      currentTab = 0;
     }
   });
+
+  // Steps
+  var currentTab = 0; // Current tab is set to be the first tab (0)
+  var listId;
+  showTab(currentTab); // Display the current tab
+
+  $('.modal-product__back').click(function(e) {
+    e.preventDefault();
+
+    if ((currentTab - 1) < 0) {
+      return false;
+    }
+
+    if ((currentTab - 1)  == 1) {
+      var x = $('.modal-product__steps');
+      $(x[currentTab-1]).find('#'+listId.attr('id')).css('display', 'flex');
+    }
+
+    nextPrev(-1);
+  }); 
+
+  $('.hero__content .btn').click(function(e) {
+    var x = $('.modal-product__steps');
+    x.css('display', 'none');
+    currentTab = 0;
+    showTab(currentTab);
+  });
+
+  $('.modal-product__item .btn').click( function(e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+
+    if ( (currentTab + 1) >  $('.modal-product__steps').length - 1  ) {
+      return false;
+    }
+
+    $('.modal-product__back').text('Back to the previous');
+    nextPrev(1, id);
+  } );
+
+  $('.product-list__item .btn').click(function(e) {
+    e.preventDefault();
+    var id = $(this).data('id');
+
+    $('#modal-product').popup('show');
+
+    var x = $('.modal-product__steps');
+    x.css('display', 'none');
+    $(x[1]).find('.modal-product__list').css('display', 'none');
+    currentTab += 1;
+    showTab(1, id);
+  });
+
+  function showTab(n, id) {
+    // This function will display the specified tab of the form ...
+    var x = $('.modal-product__steps');
+
+    var countStep = x.length;
+    var currentStep = n + 1;
+
+    $('.modal-product__current').text(currentStep);
+    $('.modal-product__all').text(countStep);
+
+    $(x[n]).css('display', 'block');
+    if (n == 0) {
+      $('.modal-product__label').text('Select flavor');
+      $(x[n+1]).find('.modal-product__list').css('display', 'none');
+      $('.modal-product__back').text('Back to home');
+    }
+    if (n == 1) {
+      $('.modal-product__label').text('Select dosage');
+      $('.modal-product__back').text('Back to the previous');
+      listId = $(x[n]).find('#'+id).css('display', 'flex');
+    }
+    if (n == 2) {
+      $('.modal-product__label').text('Confirm your choice');
+      $(x[n]).find('.modal-product__content-wrap').css('display', 'none');
+      $(x[n]).find('#'+id).css('display', 'flex');
+    }
+    // if (n == (x.length - 1)) {
+    //   $('.constructor__btn-next span').text('Отправить');
+    // } else {
+    //   $('.constructor__btn-next span').text('Далле');
+    // }
+  }
+
+  function nextPrev(n, id) {
+
+    // This function will figure out which tab to display
+    var x = $('.modal-product__steps');
+
+    // Hide the current tab:
+    $(x[currentTab]).css('display', 'none');
+    // Increase or decrease the current tab by 1:
+    currentTab = currentTab + n;
+    // if you have reached the end of the form... :
+    if (currentTab >= x.length) {
+      //...the form gets submitted:
+      return false;
+    }
+    // Otherwise, display the correct tab:
+    showTab(currentTab, id);
+  }
 
   // SVG
   svg4everybody({});

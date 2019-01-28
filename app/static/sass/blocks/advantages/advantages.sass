@@ -50,6 +50,9 @@
         .advantages__list-circle
           top: 50px
           left: 125px
+          +r(1599)
+            top: 20px
+            left: 75px
       &:nth-child(3)
         margin-left: 90px
         +r(1599)
@@ -61,6 +64,9 @@
         .advantages__list-circle
           top: 120px
           right: 120px
+          +r(1599)
+            top: 70px
+            right: 60px
     &-icon
       position: relative
       flex-shrink: 0
@@ -79,25 +85,29 @@
     &-circle
       position: absolute
       +size(20px)
-      border: 1px solid rgba($accent, 0.4)
+      border: 1px solid rgba($keppel, 0.4)
       border-radius: 50em
       z-index: -1
       &::before
         content: ''
         position: absolute
         border-radius: 50em
-        border: 1px solid rgba($accent, 0.4)
+        border: 1px solid rgba($keppel, 0.4)
         z-index: -1
         animation: circle-1 1.5s infinite linear
+        +r(767)
+          animation: circle-mob-1 1.5s infinite linear
       &::after
         content: ''
         position: absolute
         border-radius: 50em
-        border: 1px solid rgba($accent, 0.3)
+        border: 1px solid rgba($keppel, 0.3)
         z-index: -1
-        border-color: rgba($accent, 0.2)
         animation: circle-2 1.5s infinite linear
         animation-delay: 1.5s
+        +r(767)
+          animation: circle-mob-2 1.5s infinite linear
+          animation-delay: 1.5s
       &-inner
         position: relative
         width: 100%
@@ -106,19 +116,24 @@
           content: ''
           position: absolute
           border-radius: 50em
-          border: 1px solid rgba($accent, 0.2)
+          border: 1px solid rgba($keppel, 0.2)
           z-index: -1
           animation: circle-3 1.5s infinite linear
           animation-delay: 3s
+          +r(767)
+            animation: circle-mob-3 1.5s infinite linear
+            animation-delay: 3s
         &::after
           content: ''
           position: absolute
           border-radius: 50em
-          border: 1px solid rgba($accent, 0.1)
+          border: 1px solid rgba($keppel, 0.1)
           z-index: -1
-          border-color: rgba($accent, 0.2)
           animation: circle-4 1.5s infinite linear
           animation-delay: 4.5s
+          +r(767)
+            animation: circle-mob-4 1.5s infinite linear
+            animation-delay: 4.5s
     &-content
       +r(1599)
         max-width: 400px
@@ -205,3 +220,51 @@
     left: -180px
     right: -180px
     bottom: -180px
+
+@keyframes circle-mob-1
+  0%
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+  100%
+    top: -15px
+    left: -15px
+    right: -15px
+    bottom: -15px
+
+@keyframes circle-mob-2
+  0%
+    top: -15px
+    left: -15px
+    right: -15px
+    bottom: -15px
+  100%
+    top: -30px
+    left: -30px
+    right: -30px
+    bottom: -30px
+
+@keyframes circle-mob-3
+  0%
+    top: -30px
+    left: -30px
+    right: -30px
+    bottom: -30px
+  100%
+    top: -45px
+    left: -45px
+    right: -45px
+    bottom: -45px
+
+@keyframes circle-mob-4
+  0%
+    top: -45px
+    left: -45px
+    right: -45px
+    bottom: -45px
+  100%
+    top: -60px
+    left: -60px
+    right: -60px
+    bottom: -60px
