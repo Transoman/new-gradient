@@ -10,7 +10,8 @@ module.exports = function () {
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
-            'node_modules/aos/dist/aos.js'
+            'node_modules/aos/dist/aos.js',
+            'node_modules/parallax-js/dist/parallax.min.js'
             ])
             .pipe(gp.concat('libs.min.js'))
             .pipe($.gulp.dest(scriptsPATH.ouput));
@@ -21,7 +22,8 @@ module.exports = function () {
             'node_modules/svg4everybody/dist/svg4everybody.min.js',
             'node_modules/jquery/dist/jquery.min.js',
             'node_modules/jquery-popup-overlay/jquery.popupoverlay.js',
-            'node_modules/aos/dist/aos.js'
+            'node_modules/aos/dist/aos.js',
+            'node_modules/parallax-js/dist/parallax.min.js'
             ])
             .pipe(gp.concat('libs.min.js'))
             .pipe(gp.uglify())

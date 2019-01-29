@@ -168,4 +168,12 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Parallax
+  if ($(window).width() > 768) {
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+      relativeInput: false
+    });
+  }
+
 });
