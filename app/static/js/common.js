@@ -6,13 +6,19 @@ jQuery(document).ready(function($) {
   });
 
   // Fixed header
-  $(window).scroll(function() {
+  function fixedHeader() {
     if($(this).scrollTop() > 10) {
       $('.header').addClass('fixed');
     }
     else {
       $('.header').removeClass('fixed');
     }
+  }
+
+  fixedHeader();
+
+  $(window).scroll(function() {
+    fixedHeader();
   });
 
   // Toggle nav menu
@@ -157,9 +163,21 @@ jQuery(document).ready(function($) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
 
-        $headerHeight = $('.header').outerHeight();
-        $('.nav-toggle').toggleClass('active');
-        $('.mobile-menu').toggleClass('open');
+        if ($(window).width() > 1599) {
+          $headerHeight = 82;
+        }
+        else if ($(window).width() < 1600) {
+          $headerHeight = 70;
+        }
+        else if ($(window).width() > 768) {
+          $headerHeight = 61;
+        }
+        else {
+          $headerHeight = 51;
+        }
+        
+        $('.nav-toggle').removeClass('active');
+        $('.mobile-menu').removeClass('open');
 
         $('html, body').animate({
           scrollTop: target.offset().top - $headerHeight

@@ -23,15 +23,19 @@
       display: flex
     li
       margin-right: 0
-    a
-      font-size: 20px
-      font-weight: 400
-      color: $cod-gray
-      +r(1599)
-        font-size: 14px
       &:hover, &:focus
-        color: $purple-heart
-        text-decoration: underline
+        a
+          color: $cod-gray
+          text-decoration: none
+      a
+        font-size: 20px
+        font-weight: 400
+        color: $cod-gray
+        +r(1599)
+          font-size: 14px
+        &:hover, &:focus
+          color: $purple-heart
+          text-decoration: underline
   &__nav
     margin: 0
     padding: 0
