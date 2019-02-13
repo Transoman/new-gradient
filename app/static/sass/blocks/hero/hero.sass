@@ -21,6 +21,16 @@
   +r(576)
     padding: 100px 0
     background-size: cover
+    z-index: 1
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      height: 300px
+      background-image: linear-gradient(rgba(#62C1BA, 1), rgba(#62C1BA, 0))
+      z-index: -1
   .container
     position: relative
   &__content
